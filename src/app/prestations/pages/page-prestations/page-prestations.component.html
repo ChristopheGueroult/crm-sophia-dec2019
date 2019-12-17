@@ -1,0 +1,21 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th *ngFor="let itemPlus of headers" scope="col">{{ itemPlus }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- {{ collection | json  }} -->
+      <tr *ngFor="let itemNikki of collection">
+        <td>{{ itemNikki.typePresta }}</td>
+        <td>{{ itemNikki.client }}</td>
+        <td>{{ itemNikki.nbJours }}</td>
+        <td>{{ itemNikki.tjmHt | currency: 'EUR' }}</td>
+        <td>{{ itemNikki | total | currency: 'EUR' }}</td>
+        <td>{{ itemNikki | total: 'ttc' | currency: 'EUR' }}</td>
+        <td>{{ itemNikki.state }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

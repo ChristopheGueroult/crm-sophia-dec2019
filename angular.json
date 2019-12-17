@@ -33,6 +33,11 @@
                 "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/stylings/"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -124,6 +129,41 @@
             "production": {
               "devServerTarget": "crm-sophia-dec2019:serve:production"
             }
+          }
+        }
+      }
+    },
+    "graphik": {
+      "projectType": "library",
+      "root": "projects/graphik",
+      "sourceRoot": "projects/graphik/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/graphik/tsconfig.lib.json",
+            "project": "projects/graphik/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/graphik/src/test.ts",
+            "tsConfig": "projects/graphik/tsconfig.spec.json",
+            "karmaConfig": "projects/graphik/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/graphik/tsconfig.lib.json",
+              "projects/graphik/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

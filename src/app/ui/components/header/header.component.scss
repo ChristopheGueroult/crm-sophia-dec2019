@@ -1,0 +1,14 @@
+@import 'theme';
+@import 'fonts';
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+p {
+  text-align: center;
+  color: $color1;
+  font-size: $h2-fz;
+  font-weight: bold;
+}

@@ -1,0 +1,8 @@
+@import 'theme';
+a {
+  color: $color2;
+  transition: all .5s;
+  &:hover, &.active {
+    color: $color1;
+  }
+}
