@@ -1,1 +1,22 @@
-<p>page-list-clients works!</p>
+<app-template-a [title]="title" [subtitle]="subtitle">
+
+  <app-tableau-dark [headers]="headers">
+
+    <tr *ngFor="let itemNikki of collection">
+      <td><img [src]="itemNikki.image" [alt]="itemNikki.name"></td>
+      <td>{{ itemNikki.name }}</td>
+      <td>{{ itemNikki.email }}</td>
+      <td [appState]="itemNikki.state">
+        <select (change)="changeState(itemNikki, $event)">
+          <option *ngFor="let state of states | keyvalue" [value]="state.value"
+            [selected]="state.value === itemNikki.state">{{ state.value }}</option>
+        </select>
+      </td>
+    </tr>
+
+  </app-tableau-dark>
+
+  <app-button label="Ajouter un client" route="add"></app-button>
+
+</app-template-a>
+

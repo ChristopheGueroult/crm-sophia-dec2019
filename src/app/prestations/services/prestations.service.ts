@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { State } from 'src/app/shared/enums/state.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -32,8 +33,16 @@ export class PrestationsService {
   }
 
   // add item in collection
+  public add(item: any) {
+    return this.http.post(`${this.urlApi}/prestations`, item);
+  }
 
   // update item in collection
+  public update(item: Prestation, state: State) {
+    const obj = {...item};
+    obj.state = state;
+    return this.http.patch(`${this.urlApi}/prestations/${item.id}`, obj);
+  }
 
   // delete item in collection
 

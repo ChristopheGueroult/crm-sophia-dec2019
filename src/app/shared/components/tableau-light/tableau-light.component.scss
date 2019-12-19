@@ -1,0 +1,41 @@
+@import "theme";
+
+.tableau-light {
+  .state-inactif {
+    background: $color-error;
+  }
+  .state-actif {
+    background: $color-success;
+  }
+  img {
+    width: 80px;
+    // height: 80px;
+  }
+  td {
+    vertical-align: middle;
+  }
+  .state-annule {
+    background: $color-error;
+  }
+  .state-option {
+    background: $color3;
+  }
+  .state-confirme {
+    background: $color-success;
+  }
+}
+
+app-template-a {
+  .tableau-light {
+    .state-option {
+      background: $color2;
+    }
+  }
+}
+app-template-b {
+  .tableau-light {
+    .state-option {
+      background: $color1;
+    }
+  }
+}

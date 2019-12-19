@@ -1,0 +1,30 @@
+@import 'theme';
+
+a {
+  display: inline-block;
+  margin-left: 10px;
+  color: $light-color;
+  background: $dark-color;
+  transition: all .5s;
+  padding: .5rem;
+  &:hover {
+    color: $light-color;
+    background: darken($dark-color, 15);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+:host-context(app-template-a) a {
+  background: $color2;
+  &:hover {
+    background: darken($color2, 15);
+  }
+}
+
+:host-context(app-template-b) a {
+  background: $color1;
+  &:hover {
+    background: darken($color1, 15);
+  }
+}

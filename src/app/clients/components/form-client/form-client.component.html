@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="onClick()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input formControlName="name" type="text" class="form-control" id="name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input formControlName="email" type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input formControlName="image" type="file" class="form-control-file" id="image">
+  </div>
+  <div class="form-group">
+    <label for="state">state</label>
+    <select formControlName="state" class="form-control" id="state">{{states}}
+      <option *ngFor="let state of states | keyvalue" [value]="state.value"> {{ state.value }} </option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

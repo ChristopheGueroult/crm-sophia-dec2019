@@ -1,0 +1,13 @@
+<div class="table-responsive">
+  <table class="table tableau-light">
+    <thead>
+      <tr>
+        <th *ngFor="let itemPlus of headers" scope="col">{{ itemPlus }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-content></ng-content>
+    </tbody>
+  </table>
+</div>
+

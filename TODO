@@ -1,0 +1,17 @@
+
+Todo:
+  ✔ Event binding et changeState() @done(19-12-18 17:06)
+  ✔ Modifier la directive StateDirective @done(19-12-18 17:06)
+  ✔ Tableau dynamique @done(19-12-18 17:06)
+  ✔ Transclusion @done(19-12-18 17:06)
+  ✔ pipe Async @done(19-12-19 11:10)
+  ✔ button add and Output() @done(19-12-19 11:10)
+  ✔ data dans les routes pour texte bandeaux @done(19-12-19 12:01)
+  ✔ formulaires @done(19-12-19 16:48)
+  ☐ difference entre injection en public et en private
+  ☐ ex Behavior and subject
+  ☐ tp form clients
+  ☐ tp edit presta
+  ☐ tp delete presta
+  ☐ tp edit client
+

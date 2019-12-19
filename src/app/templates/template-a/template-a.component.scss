@@ -1,0 +1,19 @@
+@import 'theme';
+@import 'fonts';
+
+div {
+  background: $color2;
+  text-align: center;
+  padding: $h2-fz;
+  h1 {
+    color: $light-color;
+    font-size: $h2-fz;
+    margin: 0;
+  }
+  p {
+    color: $light-color;
+    font-size: $regular-fz;
+    margin-bottom: 0;
+  }
+}
+
