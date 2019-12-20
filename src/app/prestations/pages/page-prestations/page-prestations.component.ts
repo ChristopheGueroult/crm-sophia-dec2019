@@ -3,7 +3,8 @@ import { Observable, Subscription } from 'rxjs';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { PrestationsService } from '../../services/prestations.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-page-prestations',
@@ -11,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./page-prestations.component.scss']
 })
 export class PagePrestationsComponent implements OnInit {
+  public faEdit = faEdit;
   public collection$: Observable<Prestation[]>;
   // public collection: Prestation[];
   public headers: string[];
@@ -19,13 +21,19 @@ export class PagePrestationsComponent implements OnInit {
   public subtitle: string;
   // public states = Object.values(State);
   public states = State;
+  public sousRoutes: {route: string, label: string}[];
   // private sub: Subscription;
   constructor(
     private ps: PrestationsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
+    this.sousRoutes = [
+      {route: 'comment', label: 'Commentaires'},
+      {route: 'detail', label: 'Détail'}
+    ];
     this.route.data.subscribe((datas) => {
       // console.log(datas);
       this.title = datas.title;
@@ -42,7 +50,8 @@ export class PagePrestationsComponent implements OnInit {
       'Tjm HT',
       'Total HT',
       'Total TTC',
-      'State'
+      'State',
+      'Action'
     ];
   }
 
@@ -56,6 +65,14 @@ export class PagePrestationsComponent implements OnInit {
 
   popIn() {
     console.log('ok to generate popIn with a service');
+  }
+
+  public setFirstPresta(itemNikki) {
+    this.ps.firstPresta$.next(itemNikki);
+  }
+
+  public edit(itemNikki) {
+    this.router.navigate(['/prestations/edit', itemNikki.id]);
   }
 
 }

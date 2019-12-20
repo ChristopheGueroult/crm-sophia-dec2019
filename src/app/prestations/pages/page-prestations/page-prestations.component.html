@@ -1,7 +1,7 @@
 <app-template-b [title]="title" [subtitle]="subtitle">
 
   <app-tableau-light [headers]="headers">
-    <tr *ngFor="let itemNikki of collection$ | async">
+    <tr (click)="setFirstPresta(itemNikki)" *ngFor="let itemNikki of collection$ | async">
       <td>{{ itemNikki.typePresta }}</td>
       <td>{{ itemNikki.client }}</td>
       <td>{{ itemNikki.nbJours }}</td>
@@ -9,10 +9,13 @@
       <td>{{ itemNikki | total | currency: 'EUR' }}</td>
       <td>{{ itemNikki | total: 'ttc' | currency: 'EUR' }}</td>
       <td [appState]="itemNikki.state">
-        <select (change)="changeState(itemNikki, $event)">
+        <select (change)="changeState(itemNikki, $event)" (click)="$event.stopPropagation()">
           <option *ngFor="let state of states | keyvalue" [value]="state.value"
             [selected]="state.value === itemNikki.state">{{ state.value }}</option>
         </select>
+      </td>
+      <td>
+        <fa-icon [icon]="faEdit" (click)="$event.stopPropagation(); edit(itemNikki)"></fa-icon>
       </td>
     </tr>
 
@@ -22,5 +25,8 @@
   <app-button label="Go to Google" href="http://www.google.com"></app-button>
   <app-button label="Click me" [click]="true" (clicked)="popIn()"></app-button>
 
-</app-template-b>
+  <app-sous-nav [sousRoutes]="sousRoutes"></app-sous-nav>
 
+  <router-outlet></router-outlet>
+
+</app-template-b>

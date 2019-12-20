@@ -2,12 +2,13 @@
   "prestations": [
     {
       "id": 1,
-      "typePresta": "Formation",
+      "typePresta": "Coaching",
       "client": "Modis",
       "tjmHt": 1200,
       "nbJours": 10,
       "tva": 20,
-      "state": "Option"
+      "state": "Option",
+      "comment": "Merci Modis pour les 1.2k jour"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "tjmHt": 1200,
       "nbJours": 20,
       "tva": 20,
-      "state": "Confirmé"
+      "state": "Confirmé",
+      "comment": "Merci Capgemini pour les 1.2k jour"
     },
     {
       "typePresta": "sdfsdfg",
@@ -25,7 +27,18 @@
       "nbJours": 1,
       "tva": 20,
       "state": "Option",
-      "id": 3
+      "id": 3,
+      "comment": "Merci sdfgsdf pour les 1.2k jour"
+    },
+    {
+      "typePresta": "sdfg",
+      "client": "sdfg",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Option",
+      "comment": "sdfgsdfgsdfsgd",
+      "id": 4
     }
   ],
   "clients": [

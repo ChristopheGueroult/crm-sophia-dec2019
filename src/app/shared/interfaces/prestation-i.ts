@@ -8,6 +8,7 @@ export interface PrestationI {
   nbJours: number;
   tva: number;
   state: State;
+  comment: string;
   totalHt(): number;
   totalTtc(): number;
 }

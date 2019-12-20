@@ -28,6 +28,11 @@
   </div>
 
   <div class="form-group">
+    <label for="comment">comment</label>
+    <textarea formControlName="comment" class="form-control" id="comment">{{ form.get('comment').value }}</textarea>
+  </div>
+
+  <div class="form-group">
     <label for="state">state</label>
     <select formControlName="state" class="form-control" id="state">
       <option *ngFor="let state of states | keyvalue" [value]="state.value">{{ state.value }}</option>

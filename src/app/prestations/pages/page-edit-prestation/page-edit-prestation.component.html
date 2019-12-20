@@ -1,0 +1,7 @@
+<app-template-b [title]="title" [subtitle]="subtitle">
+
+  <div class="container" *ngIf="init$ | async as init">
+    <app-form-prestation [init]="init" (submited)="updateItemNikki($event)"></app-form-prestation>
+  </div>
+
+</app-template-b>
