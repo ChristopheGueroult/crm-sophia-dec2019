@@ -39,6 +39,16 @@
       "state": "Option",
       "comment": "sdfgsdfgsdfsgd",
       "id": 4
+    },
+    {
+      "typePresta": "formation",
+      "client": "test",
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "Annulé",
+      "comment": null,
+      "id": 5
     }
   ],
   "clients": [
@@ -46,7 +56,7 @@
       "name": "Nikki3rdDay",
       "email": "contact@nikki.com",
       "image": "../../../assets/img/logo2.jpg",
-      "state": "Actif",
+      "state": "Inactif",
       "id": 1
     },
     {
