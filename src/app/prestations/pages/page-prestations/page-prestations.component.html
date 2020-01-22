@@ -1,4 +1,25 @@
 <app-template-b [title]="title" [subtitle]="subtitle">
+  <div>
+    <!-- translation: translation pipe -->
+    <h1>{{ 'demo.title' | translate }}</h1>
+
+    <!-- translation: directive (key as attribute)-->
+    <p [translate]="'demo.text'"></p>
+
+    <!-- translation: directive (key as content of element) -->
+    <p translate>demo.text</p>
+  </div>
+
+  <!-- translation: translation pipe -->
+  <p>{{ 'demo.greeting' | translate:{'name':'Andreas'} }}</p>
+
+  <!-- translation: directive (key as attribute) -->
+  <p [translate]="'demo.greeting'" [translateParams]="{name: 'Andreas'}"></p>
+
+  <!-- translation: directive (key as content of element)-->
+  <p translate [translateParams]="{name: 'Andreas'}">demo.greeting</p>
+  <!-- translation: missing translation -->
+  <p>{{ 'demo.missing' | translate}}</p>
 
   <app-tableau-light [headers]="headers">
     <tr (click)="setFirstPresta(itemNikki)" *ngFor="let itemNikki of collection$ | async">

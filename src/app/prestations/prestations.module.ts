@@ -8,6 +8,7 @@ import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add
 import { PageEditPrestationComponent } from './pages/page-edit-prestation/page-edit-prestation.component';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -17,6 +18,7 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
     CommonModule,
     PrestationsRoutingModule,
     SharedModule,
+    TranslateModule.forChild(),
     ReactiveFormsModule,
     FontAwesomeModule
   ]

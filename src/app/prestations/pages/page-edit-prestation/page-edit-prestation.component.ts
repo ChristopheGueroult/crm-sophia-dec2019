@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { PrestationsService } from '../../services/prestations.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import {FormPrestationComponent} from '../../components/form-prestation/form-prestation.component';
 
 @Component({
   selector: 'app-page-edit-prestation',
@@ -11,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./page-edit-prestation.component.scss']
 })
 export class PageEditPrestationComponent implements OnInit {
-
+  @ViewChild(FormPrestationComponent, { static: false}) form: FormPrestationComponent;
   public title: string;
   public subtitle: string;
   public init$: Observable<Prestation>;
@@ -42,6 +43,9 @@ export class PageEditPrestationComponent implements OnInit {
     this.ps.update(item).subscribe((data) => {
       this.router.navigate(['prestations']);
     });
+  }
+  canDeactivate(){
+    return this.form.canDeactivate()
   }
 
 }

@@ -44,4 +44,8 @@ export class FormPrestationComponent implements OnInit {
     this.submited.emit(this.form.value);
   }
 
+  canDeactivate() {
+    //console.log(this.form.pristine)
+    return this.form.pristine
+  }
 }

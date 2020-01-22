@@ -1,0 +1,9 @@
+{
+	"SURE_TO_LEAVE": "Voulez vous vraiment quitter la page ? ",
+	"demo": {
+		"greeting": "Bonjour  {{name}}!",
+		"missing": "",
+		"text": "demo de ngx translate",
+		"title": "Translation demo"
+	}
+}

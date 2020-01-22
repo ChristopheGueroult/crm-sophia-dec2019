@@ -7,7 +7,7 @@
       "tjmHt": 1200,
       "nbJours": 10,
       "tva": 20,
-      "state": "Option",
+      "state": "Confirmé",
       "comment": "Merci Modis pour les 1.2k jour"
     },
     {
@@ -36,7 +36,7 @@
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
-      "state": "Option",
+      "state": "Confirmé",
       "comment": "sdfgsdfgsdfsgd",
       "id": 4
     },
@@ -46,7 +46,7 @@
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
-      "state": "Annulé",
+      "state": "Confirmé",
       "comment": null,
       "id": 5
     }
@@ -56,7 +56,7 @@
       "name": "Nikki3rdDay",
       "email": "contact@nikki.com",
       "image": "../../../assets/img/logo2.jpg",
-      "state": "Inactif",
+      "state": "Actif",
       "id": 1
     },
     {

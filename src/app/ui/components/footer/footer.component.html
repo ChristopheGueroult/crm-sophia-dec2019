@@ -2,4 +2,8 @@
   V. {{ vs.version }}
   <fa-icon [icon]="faHeart"></fa-icon>
   <img src="../../../../assets/img/logo3.jpg" alt="Nikki">
+  <select #langSelect (change)="translateService.use(langSelect.value)">
+    <option *ngFor="let lang of translateService.getLangs()" [value]="lang" [selected]="lang === translateService.currentLang">{{ lang }}</option>
+  </select>
+
 </p>

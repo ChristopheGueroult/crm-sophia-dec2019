@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { PrestationsService } from '../../services/prestations.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Prestation } from 'src/app/shared/models/prestation';
+import {FormPrestationComponent} from '../../components/form-prestation/form-prestation.component';
 
 @Component({
   selector: 'app-page-add-prestation',
@@ -9,6 +10,7 @@ import { Prestation } from 'src/app/shared/models/prestation';
   styleUrls: ['./page-add-prestation.component.scss']
 })
 export class PageAddPrestationComponent implements OnInit {
+  @ViewChild(FormPrestationComponent, { static: true}) form: FormPrestationComponent;
   public title: string;
   public subtitle: string;
   public init = new Prestation();
@@ -34,4 +36,7 @@ export class PageAddPrestationComponent implements OnInit {
     });
   }
 
+  canDeactivate(){
+    return this.form.canDeactivate()
+  }
 }

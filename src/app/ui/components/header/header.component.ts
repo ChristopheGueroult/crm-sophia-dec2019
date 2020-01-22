@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { VersionService } from 'src/app/shared/services/version.service';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
     this.title = 'Nikki\'s App';
     // this.version = this.vs.version;
   }
+
 
 
 }

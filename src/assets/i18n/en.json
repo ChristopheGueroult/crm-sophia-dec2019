@@ -1,0 +1,9 @@
+{
+	"SURE_TO_LEAVE": "Are you sure to leave ? form is not saved !! ",
+	"demo": {
+		"greeting": "Hello {{name}}!",
+		"missing": "",
+		"text": "This is a simple demonstration app for ngx-translate",
+		"title": "Translation demo"
+	}
+}
