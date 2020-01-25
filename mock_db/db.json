@@ -7,7 +7,7 @@
       "tjmHt": 1200,
       "nbJours": 10,
       "tva": 20,
-      "state": "Confirmé",
+      "state": "Option",
       "comment": "Merci Modis pour les 1.2k jour"
     },
     {
@@ -19,36 +19,6 @@
       "tva": 20,
       "state": "Confirmé",
       "comment": "Merci Capgemini pour les 1.2k jour"
-    },
-    {
-      "typePresta": "sdfsdfg",
-      "client": "sdfgsdf",
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "Option",
-      "id": 3,
-      "comment": "Merci sdfgsdf pour les 1.2k jour"
-    },
-    {
-      "typePresta": "sdfg",
-      "client": "sdfg",
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "Confirmé",
-      "comment": "sdfgsdfgsdfsgd",
-      "id": 4
-    },
-    {
-      "typePresta": "formation",
-      "client": "test",
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "Confirmé",
-      "comment": null,
-      "id": 5
     }
   ],
   "clients": [

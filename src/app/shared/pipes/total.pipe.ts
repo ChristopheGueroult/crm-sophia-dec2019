@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'total'
+  name: 'total',
+  //pure: false
 })
 export class TotalPipe implements PipeTransform {
   transform(value: any, arg?: any): any {

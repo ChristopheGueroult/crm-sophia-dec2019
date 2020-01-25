@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-import { State } from 'src/app/shared/enums/state.enum';
-import { Prestation } from 'src/app/shared/models/prestation';
-import { PrestationsService } from '../../services/prestations.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs';
+import {State} from 'src/app/shared/enums/state.enum';
+import {Prestation} from 'src/app/shared/models/prestation';
+import {PrestationsService} from '../../services/prestations.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {faEdit} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-page-prestations',
   templateUrl: './page-prestations.component.html',
-  styleUrls: ['./page-prestations.component.scss']
+  styleUrls: ['./page-prestations.component.scss'],
+//  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PagePrestationsComponent implements OnInit {
   public faEdit = faEdit;

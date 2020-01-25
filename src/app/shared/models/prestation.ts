@@ -16,6 +16,7 @@ export class Prestation implements PrestationI {
     }
   }
   totalHt(): number {
+    console.log('totalHT')
     return this.tjmHt * this.nbJours;
   }
   totalTtc(): number {

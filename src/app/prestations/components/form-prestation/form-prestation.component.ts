@@ -12,6 +12,7 @@ export class FormPrestationComponent implements OnInit {
   @Input() init: Prestation;
   @Output() submited: EventEmitter<any> = new EventEmitter();
   public form: FormGroup;
+  public isSubmitted = false;
   public states = State;
   constructor(
     private fb: FormBuilder
@@ -40,12 +41,14 @@ export class FormPrestationComponent implements OnInit {
   }
 
   public onClick() {
+    this.isSubmitted = true
     // console.log(this.form.value);
     this.submited.emit(this.form.value);
   }
 
   canDeactivate() {
-    //console.log(this.form.pristine)
-    return this.form.pristine
+    console.log(this.form.pristine)
+    console.log(this.isSubmitted)
+    return this.form.pristine || this.isSubmitted
   }
 }

@@ -110,3 +110,7 @@ Stacblitz
 https://stackblitz.com/edit/angular-cd-pp?file=src%2Fapp%2Fhello.component.ts
 https://stackblitz.com/edit/angular-cd-pp-2?file=src%2Fapp%2Fcolor.service.ts
 https://stackblitz.com/edit/angular-cd-pp-3
+
+
+One Stacblitz to rule them all 
+https://stackblitz.com/edit/angular-stackblitz-formation-angular-links

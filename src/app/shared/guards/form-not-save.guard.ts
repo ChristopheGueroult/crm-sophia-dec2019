@@ -18,7 +18,7 @@ export class FormNotSaveGuard implements CanDeactivate<FormPrestationComponent> 
     : Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     console.log('can deactivate');
     return  this.translate.get('SURE_TO_LEAVE').pipe(
-      map((str ) =>   component.canDeactivate() ? component.canDeactivate() :  confirm(str) )
+      map((str ) =>   component.canDeactivate() ? true :  confirm(str) )
     );
 
   }
